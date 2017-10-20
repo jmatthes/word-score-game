@@ -208,6 +208,8 @@ function haveLettersForWord(aProposedWord){
 				}
 			}
 		}
+		//You could code the _ logic here
+		
 		if(!foundLetter){
 			resetHand();
 			return false;
@@ -236,25 +238,20 @@ function retireHand(){
 	//Loose all the points in your hand
 	YOUR_HAND = new Array();
 	addNumbersFromBag();
+	displayHand();
 }
 
 
 $(document).ready(function() {
 	startGame();
 	
-	
 	$("#find-word-button").click(function() {
 		findWordToUse();
 	});
-	
-	
 	$("#human-find-word-button").click(function() {
 		humanFindWordToUse();
 	});
 	$("#retire-hand-button").click(function() {
 		retireHand();
 	});
-	
-	
-	
 });
