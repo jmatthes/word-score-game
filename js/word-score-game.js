@@ -1,6 +1,6 @@
 var BAG_OF_LETTERS = [
-		new Letter(' ', 2, 0),
-		new Letter(' ', 2, 0),
+		new Letter('_', 2, 0),
+		new Letter('_', 2, 0),
 		new Letter('A', 9, 1),
 		new Letter('A', 9, 1),
 		new Letter('A', 9, 1),
@@ -166,6 +166,8 @@ function successfullyAddedWord(foundWord){
 	addNumbersFromBag();
 	displayHand();
 	alert("Woot.");
+	$( "#human-word-input").val('');
+	
 }
 
 function addToScore(letterToAddToScore){
@@ -230,17 +232,29 @@ function isThisAWord(aProposedWord){
 	  return false;
 }
 
+function retireHand(){
+	//Loose all the points in your hand
+	YOUR_HAND = new Array();
+	addNumbersFromBag();
+}
+
 
 $(document).ready(function() {
 	startGame();
 	
 	
-	$( "#find-word-button").click(function() {
+	$("#find-word-button").click(function() {
 		findWordToUse();
 	});
 	
 	
-	$( "#human-find-word-button").click(function() {
+	$("#human-find-word-button").click(function() {
 		humanFindWordToUse();
 	});
+	$("#retire-hand-button").click(function() {
+		retireHand();
+	});
+	
+	
+	
 });
