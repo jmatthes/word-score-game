@@ -122,7 +122,7 @@ function displayHand(){
 	console.log("your hand has:" + YOUR_HAND.length);
 	for (i = 0; i < YOUR_HAND.length; i++) { 
 		console.log("#letter-" + (i+1) +" set to " + YOUR_HAND[i].letter);
-		$( "#letter-" + (i+1)).html(YOUR_HAND[i].letter);
+		$( "#letter-" + (i+1)).html(YOUR_HAND[i].letter + " worth " + YOUR_HAND[i].pointsWhenLettersUsed + " points");
 	}
 	
 }
@@ -139,9 +139,7 @@ function getAvailableLetter(){
 
 function findWordToUse(){
  //TODO Your job starts here.
-
-	
-	
+	alert("Your code needs to go here");	
 }
 function humanFindWordToUse(){
 	
@@ -192,7 +190,7 @@ function takeOutUsedLetters(){
 }
 
 function haveLettersForWord(aProposedWord){
-	
+	//You could code the _ logic could go in this function
 	var wordAsArray = aProposedWord.toUpperCase().split("");
 	for (i = 0; i < wordAsArray.length; i++) {
 		var foundLetter = false;
@@ -208,7 +206,7 @@ function haveLettersForWord(aProposedWord){
 				}
 			}
 		}
-		//You could code the _ logic here
+		
 		
 		if(!foundLetter){
 			resetHand();
