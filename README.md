@@ -9,15 +9,16 @@ This is a word score game.  The goal of the game is to get the most points by ma
  - Write the JavaScript to allow the "blank" space to be a wild card.  It can be any letter that is missing from the word, but is worth no points.  For example if I had the letters "H" "E" "L" "S" "S" "\_" "\_" I could make the word "HELLO" by using "H" "E" "L" "\_" "\_".
 
 任务： 
- 1. 写入逻辑以“结束游戏”，当所有的字母从包中取出使用，而且你已经释放了你的手。 编写Javascript以获取所有单词最高分（单词需要在字典"wordBank.js"中找到）。
- 2. 编写JavaScript以允许"\_"下划线为通配符。它可以是任何一个缺失的字母，但"\_"不计分。例如，如果我有字母“H”“E”“L”“S”“S”“\_”“\_”我可以使用“H”“E”“L”“ \_“”\_“。
-（如果你更擅长其他编程语言，请使用任何语言）
+ - 写入逻辑以“结束游戏”，当所有的字母从包中取出使用，而且你已经释放了你的手。 编写Javascript以获取所有单词最高分（单词需要在字典"wordBank.js"中找到）。
+进阶任务： 
+ - 编写JavaScript以允许"\_"下划线为通配符。它可以是任何一个缺失的字母，但"\_"不计分。例如，如果我有字母“H”“E”“L”“S”“S”“\_”“\_”我可以使用“H”“E”“L”“ \_“”\_“。
+（如果你更擅长其他编程语言，欢迎使用任何语言）
  
 ## Bonus
  - Make the HTML look pretty
  - Clean up the existing JavaScript code to be well formatted and have better performance (useless looping, use recursion when needed)
  
-奖励：
+边线任务：
  1. 让HTML页面更好看
  2. 清理、改善现有的JavaScript代码格式，使其有更好的性能（无用的循环，只在需要时使用递归）
  
@@ -27,15 +28,16 @@ This is a word score game.  The goal of the game is to get the most points by ma
  https://github.com/jmatthes/word-score-game
  2. 下载notepad或其他编辑器，打开源文件中的js文件
  3. 理解题目需求，阅读源代码，进行编译
- 4. 打开index.html，验证编译效果
- 5. 完成开发后，上传编译后的所有文件到你的项目中，将连接发送给我们。也可以打包压缩成.zip，发送至hxuan1@its.jnj.com。
+ 4. 打开index.html，测试编译效果
+ 5. 完成开发后，上传编译后的所有文件到你的项目中，关注以下微信公众号提交你的项目链接。
 
 ## Q&A
 联系我们
-1. 关注微信公众号，搜索微信公众号：JNJ_ADC。
-2. 直接发送问题，后台会有人答复。
+1. 关注微信公众号：JNJ_ADC。
+2. 如有问题，直接发送问题至聊天窗口，后台会有人答复。
+3. 完成任务后，将你的项目链接以：姓名_url的格式发送到聊天窗口，即完成任务提交。逾期视为自动放弃。
 
-请按自己能力和时间，完成尽量多的试题，我们会在近期择优通知进行终面。谢谢！
+请在规定时间内，完成尽量多的试题，我们会在一周内择优通知进行终面。谢谢！
 
  
 ### Thanks
