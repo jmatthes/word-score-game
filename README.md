@@ -25,11 +25,12 @@ This is a word score game.  The goal of the game is to get the most points by ma
  
  
 ## Guide 
- 1. 注册Github，打开项目源代码链接， https://github.com/jmatthes/word-score-game，点击"Fork"，拷贝一份到自己账号下。
- 2. 下载notepad或其他编辑器，打开源文件中的js文件
- 3. 理解题目需求，阅读源代码，进行编译
- 4. 打开index.html，测试编译效果
- 5. 完成开发后，上传编译后的所有文件到你的项目中，关注以下微信公众号提交你的项目链接。
+ 1. 注册Github，打开项目源代码链接，https://github.com/jmatthes/word-score-game。
+ 2. 点击"Fork"，拷贝一份到自己账号下。
+ 3. 下载notepad或其他编辑器，打开源文件中的js文件
+ 4. 理解题目需求，阅读源代码，进行编译
+ 5. 打开index.html，测试编译效果
+ 6. 完成开发后，上传编译后的所有文件到你的项目中，关注以下微信公众号提交你的项目链接。
 
 ## Q&A
 联系我们
