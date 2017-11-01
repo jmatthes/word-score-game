@@ -120,9 +120,18 @@ function addNumbersFromBag(){
 
 function displayHand(){
 	console.log("your hand has:" + YOUR_HAND.length);
-	for (i = 0; i < YOUR_HAND.length; i++) { 
+	for (i = 0; i < YOUR_HAND.length; i++) {
+
 		console.log("#letter-" + (i+1) +" set to " + YOUR_HAND[i].letter);
-		$( "#letter-" + (i+1)).html(YOUR_HAND[i].letter + " worth " + YOUR_HAND[i].pointsWhenLettersUsed + " points");
+		$( "#letter-" + (i+1)).addClass("letter-" + YOUR_HAND[i].letter);
+		$( "#points-" + (i+1)).addClass("points-" + YOUR_HAND[i].pointsWhenLettersUsed);
+		
+		
+		
+		
+		$( "#letter-" + (i+1)).html(YOUR_HAND[i].letter);
+		
+		$( "#points-" + (i+1)).html(YOUR_HAND[i].pointsWhenLettersUsed);
 	}
 	
 }
@@ -160,10 +169,10 @@ function humanFindWordToUse(){
 
 function successfullyAddedWord(foundWord){
 	$( "#word-history-list").append("<li>" + foundWord + "</li>");
+	clearClasses();
 	takeOutUsedLetters();
 	addNumbersFromBag();
 	displayHand();
-	alert("Woot.");
 	$( "#human-word-input").val('');
 	
 }
@@ -181,7 +190,7 @@ function takeOutUsedLetters(){
 		if(YOUR_HAND[ii].used){
 			addToScore(YOUR_HAND[ii]);
 			YOUR_HAND.splice(ii, 1);
-			ii=ii-1;
+			ii = ii-1;
 		}else{
 			console.log(YOUR_HAND[ii].letter + "<- Not Used");
 		}
@@ -234,11 +243,17 @@ function isThisAWord(aProposedWord){
 
 function retireHand(){
 	//Loose all the points in your hand
+	clearClasses();
 	YOUR_HAND = new Array();
 	addNumbersFromBag();
 	displayHand();
 }
-
+function clearClasses(){
+	for(ii=0; ii < YOUR_HAND.length; ii++){
+		$("#letter-" + (ii+1)).removeClass("letter-" + YOUR_HAND[ii].letter);
+		$("#points-" + (ii+1)).removeClass("points-" + YOUR_HAND[ii].pointsWhenLettersUsed);
+	}
+}
 
 $(document).ready(function() {
 	startGame();
@@ -251,5 +266,10 @@ $(document).ready(function() {
 	});
 	$("#retire-hand-button").click(function() {
 		retireHand();
+	});
+	$('#human-word-input').keypress(function(event) {
+		if (event.which == 13) {
+			humanFindWordToUse();
+		}
 	});
 });

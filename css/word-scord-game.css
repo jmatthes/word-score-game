@@ -1,0 +1,88 @@
+#letters-you-have-box{
+	/* column-count: 8; */
+}
+
+.letter{
+	margin-top: -28px;
+    margin-left: -10px;
+    font-size: 5.2em;
+}
+.point{
+    margin-top: -115px;
+    margin-left: 50px;
+    
+    font-size: 1.8em;
+}
+
+.tile-piece {
+    border-radius: 15px;
+    background-repeat: repeat;
+    padding: 20px; 
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
+
+.tile-piece-1 {
+    background: url(../img/red-oak.jpg);
+    background-position: left top;
+}
+
+.tile-piece-2 {
+    background: url(../img/red-oak.jpg);
+    background-position: right top;
+}
+.tile-piece-3 {
+    background: url(../img/red-oak.jpg);
+    background-position: left bottom;
+}
+.tile-piece-4 {
+    background: url(../img/red-oak.jpg);
+    background-position: right bottom;
+}
+
+.letter-I{
+	margin-left: 10px;
+}
+.letter-J{
+	margin-left: 8px;
+}
+.letter-P{
+	margin-left: 3px;
+}
+.letter-M{
+	margin-left: -15px;
+}
+.letter-N{
+	margin-left: -7px;
+}
+.letter-W{
+	margin-left: -14px;
+}
+.letter-S{
+	margin-left: -2px;
+}
+.letter-F{
+	margin-left: -2px;
+}
+.letter-_ {
+	margin-left: -5px;
+}
+.letter-E {
+	margin-left: -6px;
+}
+.letter-T{
+	margin-left: -4px;
+}
+.letter-R{
+	margin-left: -6px;
+}.letter-Q{
+	margin-left: -12px;
+}
+.letter-L{
+	margin-left: -4px;
+}
+.points-10{
+	margin-left: 40px;
+}

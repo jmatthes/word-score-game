@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Word Score Game</title>
+	<meta charset="UTF-8">
+	<link type="text/css" rel="stylesheet" charset="UTF-8" href="css/word-scord-game.css">
+	<title>Word Score Game</title>
 </head>
 <body>
 	<div id="layout">
 	<header><h1>Simple word score game</h1></header>
 	<div id="score-box"><p><strong>Score:&nbsp;</strong><span id="score-number">0</span></p></div>
 	<br />
-	<ul id="word-history-list">
-	</ul>
+
 	
 	
 	
 	<div id="letters-you-have-box">
-		<p id="letter-1"></p>
-		<p id="letter-2"></p>
-		<p id="letter-3"></p>
-		<p id="letter-4"></p>
-		<p id="letter-5"></p>
-		<p id="letter-6"></p>
-		<p id="letter-7"></p>
+		<table>
+		<tr>
+		<td><div class="tile-piece tile-piece-1"> <p class="letter" id="letter-1"></p><p class="point" id="points-1"></p></div></td>
+		<td><div class="tile-piece tile-piece-2"> <p class="letter" id="letter-2"></p><p class="point" id="points-2"></p></div></td>
+		<td><div class="tile-piece tile-piece-3"> <p class="letter" id="letter-3"></p><p class="point" id="points-3"></p></div></td>
+		<td><div class="tile-piece tile-piece-4"> <p class="letter" id="letter-4"></p><p class="point" id="points-4"></p></div></td>
+		<td><div class="tile-piece tile-piece-1"> <p class="letter" id="letter-5"></p><p class="point" id="points-5"></p></div></td>
+		<td><div class="tile-piece tile-piece-2"> <p class="letter" id="letter-6"></p><p class="point" id="points-6"></p></div></td>
+		<td><div class="tile-piece tile-piece-3"> <p class="letter" id="letter-7"></p><p class="point" id="points-7"></p></div></td>
+		</tr>
+		</table>
 	</div>
 	<button id="find-word-button">Run your code to find a word</button>
 	<br />
@@ -32,6 +36,8 @@
 	<br />
 	<button id="retire-hand-button">Retire the hand</button>
 	</div>
+	<ul id="word-history-list">
+	</ul>
 
 	<script type="text/javascript" src="lib/jquery-3.2.1.js"></script>
 	<script type="text/javascript" src="lib/wordList.min.js"></script>
