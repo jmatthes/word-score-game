@@ -109,6 +109,8 @@ function startGame() {
 	
 };
 
+
+
 function addNumbersFromBag(){
 	console.log("your hand has:" + YOUR_HAND.length);
 	for(i=YOUR_HAND.length; i < 7; i++){
