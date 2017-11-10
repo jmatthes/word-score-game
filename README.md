@@ -34,7 +34,7 @@ This is a word score game.  The goal of the game is to get the most points by ma
 
 ## Q&A
 联系我们
-1. 关注微信公众号：JNJ_ADC。
+1. 关注微信公众号：IT招聘临时号。
 2. 如有问题，直接发送问题至聊天窗口，后台会有人答复。
 3. 完成任务后，将你的项目链接以：姓名_url的格式发送到聊天窗口，即完成任务提交。逾期视为自动放弃。
 
