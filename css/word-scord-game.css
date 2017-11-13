@@ -1,3 +1,6 @@
+*{
+    margin: 0;padding: 0;
+}
 #letters-you-have-box{
 	/* column-count: 8; */
 }
@@ -85,4 +88,40 @@
 }
 .points-10{
 	margin-left: 40px;
+}
+#layout{
+    width: 960px;margin: 0 auto;text-align: center;padding: 20px 0;
+}
+#layout h1{
+    font-size: 40px;
+}
+.mt20{
+    margin-top: 20px;
+}
+.mt10{
+    margin-top: 10px;
+}
+#find-word-button{
+    margin-right: 20px;
+}
+#layout table{
+    margin-left: 80px;
+}
+.ml10{
+    margin-left: 10px;
+}
+#word-history-list{
+    list-style-type:decimal;
+}
+#score-box{
+    font-size: 20px;
+}
+#human-word-input{
+    width: 200px;height: 30px;text-indent: 6px;
+}
+.btn{
+    background-color:#2DA5FB;height: 32px;border: none;color: #fff;cursor: pointer;padding: 0 8px;font-size: 16px;border-radius: 3px;
+}
+#word-history-list{
+    text-align: left;padding: 0 110px;font-size: 18px;line-height: 1.5
 }

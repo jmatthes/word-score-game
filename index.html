@@ -7,42 +7,31 @@
 </head>
 <body>
 	<div id="layout">
-	<header><h1>Word score game</h1></header>
-	<div id="score-box"><p><strong>Score:&nbsp;</strong><span id="score-number">0</span></p></div>
-	<br />
-	<div id="remaining-letters-key">
+		<header><h1>Word score game</h1></header>
+		<div id="score-box"><p><strong>Score:&nbsp;</strong><span id="score-number">0</span></p></div>
+		<br />
+		<div id="remaining-letters-key">
+		</div>
+		<div id="letters-you-have-box">
+			<table>
+				<tr>
+					<td><div class="tile-piece tile-piece-1"> <p class="letter" id="letter-1"></p><p class="point" id="points-1"></p></div></td>
+					<td><div class="tile-piece tile-piece-2"> <p class="letter" id="letter-2"></p><p class="point" id="points-2"></p></div></td>
+					<td><div class="tile-piece tile-piece-3"> <p class="letter" id="letter-3"></p><p class="point" id="points-3"></p></div></td>
+					<td><div class="tile-piece tile-piece-4"> <p class="letter" id="letter-4"></p><p class="point" id="points-4"></p></div></td>
+					<td><div class="tile-piece tile-piece-1"> <p class="letter" id="letter-5"></p><p class="point" id="points-5"></p></div></td>
+					<td><div class="tile-piece tile-piece-2"> <p class="letter" id="letter-6"></p><p class="point" id="points-6"></p></div></td>
+					<td><div class="tile-piece tile-piece-3"> <p class="letter" id="letter-7"></p><p class="point" id="points-7"></p></div></td>
+				</tr>
+			</table>
+		</div>
+		<div class="button mt10">
+			<button id="find-word-button" class="btn">Run your code to find a word</button>
+			<input type="text" id="human-word-input" placeholder="请输入您要搜索的单词" /><button id="human-find-word-button" class="btn">Human Find a word</button>
+			<button id="retire-hand-button" class="btn ml10">Retire the hand</button>
+		</div>
+		<ul id="word-history-list" class="mt20"></ul>
 	</div>
-	
-	
-	<div id="letters-you-have-box">
-		<table>
-		<tr>
-		<td><div class="tile-piece tile-piece-1"> <p class="letter" id="letter-1"></p><p class="point" id="points-1"></p></div></td>
-		<td><div class="tile-piece tile-piece-2"> <p class="letter" id="letter-2"></p><p class="point" id="points-2"></p></div></td>
-		<td><div class="tile-piece tile-piece-3"> <p class="letter" id="letter-3"></p><p class="point" id="points-3"></p></div></td>
-		<td><div class="tile-piece tile-piece-4"> <p class="letter" id="letter-4"></p><p class="point" id="points-4"></p></div></td>
-		<td><div class="tile-piece tile-piece-1"> <p class="letter" id="letter-5"></p><p class="point" id="points-5"></p></div></td>
-		<td><div class="tile-piece tile-piece-2"> <p class="letter" id="letter-6"></p><p class="point" id="points-6"></p></div></td>
-		<td><div class="tile-piece tile-piece-3"> <p class="letter" id="letter-7"></p><p class="point" id="points-7"></p></div></td>
-		</tr>
-		</table>
-	</div>
-	<button id="find-word-button">Run your code to find a word</button>
-	<br />
-	<br />
-	<input type="text" id="human-word-input" />
-	<button id="human-find-word-button">Human Find a word</button>
-	<br />
-	<br />
-	<button id="retire-hand-button">Retire the hand</button>
-	</div>
-	<ul id="word-history-list">
-	</ul>
-
-	<script type="text/javascript" src="lib/jquery-3.2.1.js"></script>
-	<script type="text/javascript" src="lib/wordList.min.js"></script>
-	<script type="text/javascript" src="lib/wordBank.min.js"></script>
-	<script type="text/javascript" src="js/word-score-game-letters.js"></script>
-	<script type="text/javascript" src="js/word-score-game.js"></script>
+	<script type="text/javascript" src="./js/require.js" data-main="./js/main"></script>
 </body>
 </html>
