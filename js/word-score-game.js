@@ -143,17 +143,65 @@ function displayHand(){
 function getAvailableLetter(){
 	var randomIndex = Math.floor(Math.random() * BAG_OF_LETTERS.length);
 	var randomLetter = BAG_OF_LETTERS.splice(randomIndex, 1);
-	console.log(randomLetter[0]);
+		console.log('1', randomLetter[0]);
 	return randomLetter[0];
 }
 
+function getGroup(data, index=0, group=[]) {
+  var need_apply = new Array();
+  need_apply.push(data[index]);
+  for(var i = 0; i < group.length; i++) {
+    need_apply.push(group[i] + data[index]);
+  }
+  group.push.apply(group, need_apply);
+  if(index + 1 >= data.length){
+  	return group;
+  }
+  else{
+  	return getGroup(data, index + 1, group);
+  }
+
+}
+
+function calculatedWordVlaue(word, value=0) {
+
+}
 
 function findWordToUse(){
  //TODO Your job starts here.
-	alert("Your code needs to go here");	
+	const dictForUsed = new Array();
+	const letterListForUsed = new Array();
+	console.log('YOUR_HAND',YOUR_HAND)
+	for (var i=0;i<YOUR_HAND.length;i++) {
+		letterListForUsed.push(YOUR_HAND[i]['letter'])
+		dictForUsed[YOUR_HAND[i]['letter']] =YOUR_HAND[i]['pointsWhenLettersUsed']
+	}
+	console.log('11', dictForUsed)
+	var getGroupList = getGroup(letterListForUsed)
+	console.log('getGroupList', getGroupList)
+	var maxValue = 0
+	var mostValueWord = ''
+	for (var i=0;i<getGroupList.length;i++){
+		console.log('1 --',getGroupList[i])
+		if(isThisAWord(getGroupList[i])){
+			console.log('2')
+			var lettersToCalculated = getGroupList[i].split("")
+			var wordValue = 0
+			for (var j=0;j<lettersToCalculated.length;j++){
+				wordValue += parseInt(dictForUsed[lettersToCalculated[j]])
+			}
+			if(wordValue>= maxValue){
+				mostValueWord = getGroupList[i]
+				maxValue = wordValue
+			}
+			}else{
+			continue
+		}
+	}
+	confirmLettersForWord(mostValueWord)
+	successfullyAddedWord(mostValueWord);
 }
 function humanFindWordToUse(){
-	
 	 var humanFoundWord = $( "#human-word-input").val();
 	 console.log("Checking human workd of:" + humanFoundWord);
 	 if(isThisAWord(humanFoundWord)){
@@ -170,7 +218,7 @@ function humanFindWordToUse(){
 
 
 function successfullyAddedWord(foundWord){
-	$( "#word-history-list").append("<li>" + foundWord + "</li>");
+	$( "#word-history-list").append('<li class="list-group-item" style="text-align:center;background: #f7f0f09e;">' + foundWord + '</li>');
 	clearClasses();
 	takeOutUsedLetters();
 	addNumbersFromBag();
@@ -187,7 +235,7 @@ function addToScore(letterToAddToScore){
 
 
 function takeOutUsedLetters(){
-	
+	console.log('YOUR_HAND-1', YOUR_HAND)
 	for(ii=0; ii < YOUR_HAND.length; ii++){
 		if(YOUR_HAND[ii].used){
 			addToScore(YOUR_HAND[ii]);
@@ -200,6 +248,22 @@ function takeOutUsedLetters(){
 	
 }
 
+function confirmLettersForWord(aProposedWord){
+	var wordAsArray = aProposedWord.toUpperCase().split("");
+	for (i = 0; i < YOUR_HAND.length; i++) {
+		for(ii=0; ii<wordAsArray.length; ii++) {
+			if(YOUR_HAND[i].letter == wordAsArray [ii]|| YOUR_HAND[i].letter =="_"){
+				if(!YOUR_HAND[i].used){
+					console.log("     " + YOUR_HAND[i].letter + "<-Found");
+					YOUR_HAND[i].used = true;
+
+				}
+			}
+        }
+
+	}
+}
+
 function haveLettersForWord(aProposedWord){
 	//You could code the _ logic could go in this function
 	var wordAsArray = aProposedWord.toUpperCase().split("");
@@ -208,7 +272,7 @@ function haveLettersForWord(aProposedWord){
 		console.log(wordAsArray[i] + "<-For match");
 		for(ii=0; ii<YOUR_HAND.length; ii++){
 			console.log("              " + YOUR_HAND[ii].letter + "<-Checking");
-			if(YOUR_HAND[ii].letter == wordAsArray [i]){
+			if(YOUR_HAND[ii].letter == wordAsArray [i]|| YOUR_HAND[ii].letter =="_"){
 				if(!YOUR_HAND[ii].used && !foundLetter){
 					console.log("     " + YOUR_HAND[ii].letter + "<-Found");
 					YOUR_HAND[ii].used = true;
