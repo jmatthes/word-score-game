@@ -155,7 +155,7 @@ function findWordToUse(){
 function humanFindWordToUse(){
 	
 	 var humanFoundWord = $( "#human-word-input").val();
-	 console.log("Checking human workd of:" + humanFoundWord);
+	 console.log("Checking human word of:" + humanFoundWord);
 	 if(isThisAWord(humanFoundWord)){
 		 if(haveLettersForWord(humanFoundWord)){
 			 successfullyAddedWord(humanFoundWord);
@@ -202,7 +202,11 @@ function takeOutUsedLetters(){
 
 function haveLettersForWord(aProposedWord){
 	//You could code the _ logic could go in this function
-	var wordAsArray = aProposedWord.toUpperCase().split("");
+	var wordAsArray=aProposedWord.split("");
+	for(i=0; i<wordAsArray.length; i++) {
+		if(wordAsArray[i]!='_'){
+			wordAsArray[i].toUpperCase();	
+	//var wordAsArray = aProposedWord.toUpperCase().split("");
 	for (i = 0; i < wordAsArray.length; i++) {
 		var foundLetter = false;
 		console.log(wordAsArray[i] + "<-For match");
@@ -249,6 +253,8 @@ function retireHand(){
 	YOUR_HAND = new Array();
 	addNumbersFromBag();
 	displayHand();
+	SCORE=0;
+	$( "#score-number").html(SCORE);
 }
 function clearClasses(){
 	for(ii=0; ii < YOUR_HAND.length; ii++){
