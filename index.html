@@ -2,47 +2,86 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 	<link type="text/css" rel="stylesheet" charset="UTF-8" href="css/word-scord-game.css">
 	<title>Word Score Game</title>
+	<style>
+		#button-you-have-box{
+		margin-top: 40px;
+		}
+		.letter {
+		margin-top: -15px;
+		margin-left: -5px;
+		font-size: 2.2em;
+		}
+		.point {
+			margin-top: -5px;
+			margin-left: -10px;
+			font-size: 1.8em;
+		}
+	</style>
 </head>
 <body>
 	<div id="layout">
-	<header><h1>Word score game</h1></header>
-	<div id="score-box"><p><strong>Score:&nbsp;</strong><span id="score-number">0</span></p></div>
+	<header><h1 style="text-align:center">Word Score Game</h1></header>
+
+	<div id="score-box"><p style="text-align:center"><strong>Score:&nbsp;</strong><span id="score-number" style="font-size: 50px">0</span></p></div>
 	<br />
 	<div id="remaining-letters-key">
 	</div>
-	
-	
-	<div id="letters-you-have-box">
-		<table>
-		<tr>
-		<td><div class="tile-piece tile-piece-1"> <p class="letter" id="letter-1"></p><p class="point" id="points-1"></p></div></td>
-		<td><div class="tile-piece tile-piece-2"> <p class="letter" id="letter-2"></p><p class="point" id="points-2"></p></div></td>
-		<td><div class="tile-piece tile-piece-3"> <p class="letter" id="letter-3"></p><p class="point" id="points-3"></p></div></td>
-		<td><div class="tile-piece tile-piece-4"> <p class="letter" id="letter-4"></p><p class="point" id="points-4"></p></div></td>
-		<td><div class="tile-piece tile-piece-1"> <p class="letter" id="letter-5"></p><p class="point" id="points-5"></p></div></td>
-		<td><div class="tile-piece tile-piece-2"> <p class="letter" id="letter-6"></p><p class="point" id="points-6"></p></div></td>
-		<td><div class="tile-piece tile-piece-3"> <p class="letter" id="letter-7"></p><p class="point" id="points-7"></p></div></td>
-		</tr>
-		</table>
-	</div>
-	<button id="find-word-button">Run your code to find a word</button>
-	<br />
-	<br />
-	<input type="text" id="human-word-input" />
-	<button id="human-find-word-button">Human Find a word</button>
-	<br />
-	<br />
-	<button id="retire-hand-button">Retire the hand</button>
-	</div>
-	<ul id="word-history-list">
-	</ul>
 
+
+	<div id="letters-you-have-box" class="col-md-12 common-center">
+
+		<div class="tile-piece tile-piece-1 col-md-1"> <p class="letter text-center" id="letter-1"></p><p class="point" id="points-1"></p></div>
+		<div class="tile-piece tile-piece-2 col-md-1"> <p class="letter text-center" id="letter-2"></p><p class="point" id="points-2"></p></div>
+		<div class="tile-piece tile-piece-3 col-md-1" > <p class="letter" id="letter-3"></p><p class="point" id="points-3"></p></div>
+		<div class="tile-piece tile-piece-4 col-md-1"> <p class="letter" id="letter-4"></p><p class="point" id="points-4"></p></div>
+		<div class="tile-piece tile-piece-1 col-md-1"> <p class="letter" id="letter-5"></p><p class="point" id="points-5"></p></div>
+		<div class="tile-piece tile-piece-2 col-md-1"> <p class="letter" id="letter-6"></p><p class="point" id="points-6"></p></div>
+		<div class="tile-piece tile-piece-3 col-md-1"> <p class="letter" id="letter-7"></p><p class="point" id="points-7"></p></div>
+
+	</div>
+		<div id="button-you-have-box" class="col-md-12">
+			<div class="input-group common-center" style="margin-top:10px;">
+			 <button type="button"  class="btn btn-default btn-lg" id="find-word-button">Run your code to find a word</button>
+			</div>
+
+			<div class="input-group common-center" style="margin-top:10px;width:300px">
+					<input type="text" class="form-control" id="human-word-input">
+			</div>
+            <div class="common-center">
+                <div class="input-group" style="margin-top:10px;">
+                    <button type="button " class="btn btn-default btn-lg" id="human-find-word-button">Human Find a word</button>
+
+                </div>
+
+                <div class="input-group" style="margin: 10px 0 0 8px;">
+                    <button type="button" class="btn btn-default btn-lg" id="retire-hand-button">    Retire the hand    </button>
+
+                </div>
+            </div>
+
+
+
+		</div>
+
+	</div >
+
+		<ul id="word-history-list"  class="list-group" style="margin-top:300px">
+
+		</ul>
+	</div>
 	<script type="text/javascript" src="lib/jquery-3.2.1.js"></script>
 	<script type="text/javascript" src="lib/wordList.min.js"></script>
 	<script type="text/javascript" src="lib/wordBank.min.js"></script>
 	<script type="text/javascript" src="js/word-score-game-letters.js"></script>
 	<script type="text/javascript" src="js/word-score-game.js"></script>
 </body>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </html>
+
+
+

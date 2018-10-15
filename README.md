@@ -43,3 +43,10 @@ This is a word score game.  The goal of the game is to get the most points by ma
  
 ### Thanks
 A special thanks to [WordList-JS](https://github.com/JackolanternIR/WordList-JS) for the dictionary JavaScript library.
+
+### have been upgraded
+   1. 完成基本功能和对应的进阶功能
+   2。优化页面
+
+### still to upgrade
+   1.测试完成后，不能提供提示符，在控制台上会有错误信息
